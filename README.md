@@ -22,6 +22,7 @@ Based on [sirafantas/dropcheck](https://github.com/sirafantas/dropcheck)
 
 cd ~/
 git clone https://github.com/yuasabe/dropcheck.git
+cd ~/dropcheck
 
 # Check the target interface (e.g. en0, vlan1)
 ip link | grep 'UP'
@@ -31,11 +32,14 @@ ip link set en1 down
 ip link set en2 down
 ...
 
-# Edit root directory of smug_config.yml file
+# If necessary, edit root directory of smug_config.yml file
 # Change the line below to point to your directory:
-root: ~/Developer/shownet/dropcheck_yuasabe
-# e.g. root: ~/dropcheck
+root: ~/dropcheck
 
-# Run tests
+# Run tests (remember to specify interface)
 sudo smug start -f smug_config.yml interface=en0
 ```
+
+## Screenshots
+
+![IPv4 Only Results](./img/ipv4-only.png)
