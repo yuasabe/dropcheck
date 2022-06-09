@@ -38,6 +38,9 @@ root: ~/dropcheck
 
 # Run tests (remember to specify interface)
 sudo smug start -f smug_config.yml interface=en0
+
+# When finished, exit tmux
+Ctrl-B, :kill-window
 ```
 
 ## Screenshots
