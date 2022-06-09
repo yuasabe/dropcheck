@@ -1,0 +1,19 @@
+session: DropTest
+
+root: ~/dropcheck
+
+windows:
+  - name: DropTest
+    layout: tiled
+    commands:
+      - ./dropcheck ${interface} 1
+    panes:
+      - type: tiled
+        commands:
+          - ./dropcheck ${interface} 2
+      - type: tiled
+        commands:
+          - ./dropcheck ${interface} 3 
+      - type: tiled
+        commands:
+          - ./dropcheck ${interface} 4
